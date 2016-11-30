@@ -1,1 +1,61 @@
-box-sizing
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	 #content-box{
+        box-sizing:content-box;
+        -webkit-box-sizing:content-box;
+        -moz-box-sizing:content-box;
+        -ms-box-sizing:content-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #E6A43F;
+        background: blue;
+    }
+    #padding-box{
+        box-sizing:padding-box;
+        -webkit-box-sizing:padding-box;
+        -moz-box-sizing:padding-box;
+        -ms-box-sizing:padding-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #186645;
+        background: red;                
+    }
+    #border-box{
+        box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+         -ms-box-sizing:border-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #3DA3EF;
+        background: yellow;
+    }
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var Content = document.getElementById('content-box');
+			var Padding = document.getElementById('padding-box');
+			var Border = document.getElementById('border-box');
+			alert(Content.offsetWidth)
+			alert(Padding.offsetWidth)
+			alert(Border.offsetWidth)
+
+		};
+	</script>
+</head>
+<body>
+<div id="content-box"></div>
+<div id="padding-box"></div>
+<div id="border-box"></div>
+
+
+</body>
+</html>
